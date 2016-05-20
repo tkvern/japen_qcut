@@ -36,6 +36,10 @@
 
 		}
 
+		#SalonDetail #SalonLead p.lead{
+			font-size: 1.4rem
+		}
+
 		#SalonDetail #SalonLead p{
 			font-size: 14px;
 			line-height: 36px;
@@ -184,6 +188,20 @@
 	#SalonDetail #Style{
 		margin: 0 0 240px;
 
+	}
+
+	#SalonDetail #Style h2{    
+		font-size: 1.4rem;
+    margin: 0 0 24px;
+    text-align: center
+	}
+
+	#SalonDetail #Style .links{    
+		height: 24px;
+    margin-top: 18px;
+    margin-bottom: -6px;
+    text-align: center;
+    font-size: 1rem
 	}
 
 	#SalonDetail #Style #Catalog{

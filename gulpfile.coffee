@@ -19,7 +19,9 @@ gulp.task 'rebuild', ->
   broeserSync.reload()
 
 gulp.task 'watch', ->
-  gulp.watch(['./*.html'], ['rebuild'])
+  gulp.watch(['./gulptask/**/*.html'], ['rebuild'])
+  gulp.watch(['./gulptask/**/*.css'], ['css'])
+  gulp.watch(['./gulptask/**/*.js'], ['js'])
 
 
 gulp.task 'css', -> 
