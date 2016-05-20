@@ -1,0 +1,133 @@
+@charset utf-8;
+
+#Concept {
+	padding: 256px 0 256px;
+	text-align: center;
+}
+
+#Concept .lead {
+	margin: 0 0 58px;
+	font-size: 1.4rem;
+}
+
+#Concept p {
+	font-size: 14px;
+	line-height: 36px;
+}
+
+.common-section {
+	margin-bottom: 164px;
+}
+
+.common-section h2 {
+	font-size: 1.4rem;
+	margin: 0 0 24px;
+	text-align: center;
+}
+
+.common-section .more {
+	height: 24px;
+	margin-bottom: -6px;
+	text-align: center;
+	font-size: 1rem;
+}
+
+#Gallery{
+	padding-top: 100px;	
+}
+
+#Gallery .visual {
+	margin: 0 0 18px;
+	width:100%;
+	overflow: hidden;
+}
+#Gallery .visual .resizableImageMask {
+	float: left;
+}
+
+#News {
+		padding-top: 100px;
+}
+
+#News h2 {
+	font-size: 1.4rem;
+	margin: 0 0 90px;
+}
+
+#News dl,
+#Company dl {
+	width: 552px;
+	margin: 0 auto 59px;
+	overflow: hidden;
+}
+
+#News dl dt,
+#Company dl dt {
+	clear: left;
+	float: left;
+	width: 120px;
+	margin-bottom: 12px;
+}
+
+#News dl dd,
+#Company dl dd {
+	float: left;
+	width: 432px;
+	margin-bottom: 12px;
+}
+
+#Salon {
+	padding-top: 100px;
+}
+
+#Salon .visual {
+	overflow: hidden;
+}
+
+#Salon .resizableImageMask {
+	float:left;
+	background-color: #000000;
+	position: relative;
+}
+
+#Salon .salonName {
+	position: absolute;
+	top: 122px;
+	left: 0;
+	width:100%;
+	height:96px;
+	text-align: center;
+	color: white;
+	font-size: 1.6rem;
+	font-weight: 100;
+}
+
+#Salon .salonName img {
+}
+
+#Company {
+	margin-bottom: 245px;
+	padding-top: 100px;
+}
+
+#Company h2 {
+	margin: 0 0 90px;
+}
+
+#Company dl {
+	margin-bottom: 59px;
+}
+
+#Company .links {
+	width: 334px;
+	height: 24px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#Company .links li {
+	float: left;
+	margin: 0 14px;
+	font-size: 1rem;
+}
+
