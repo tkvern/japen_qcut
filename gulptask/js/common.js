@@ -114,15 +114,15 @@ var UAManager = {
 	//デバイスを判別して、PC/SPそれぞれのページにリダイレクトします
 	UAManager.init();
 	
-	var loc = location.pathname;
-	var currentMode = (loc.indexOf("/sp/") > -1) ? "MOBILE" : "PC"; 
-	if( UAManager.type === "mobile" && currentMode === "PC" ) {
-		location.href = loc.replace(/^(.+)$/, "/sp$1");					
-	} else if( UAManager.type === "pc" && currentMode === "MOBILE" ) {
-		loc = loc.replace(/(\/salon\/(ashiya|kobe|hiroo|osaka|cocochie)\/).*$/,"$1");
-		loc = loc.replace(/(\/recruit\/).*$/,"$1");
-		location.href = loc.replace("/sp/", "/");
-	}
+	// var loc = location.pathname;
+	// var currentMode = (loc.indexOf("/sp/") > -1) ? "MOBILE" : "PC"; 
+	// if( UAManager.type === "mobile" && currentMode === "PC" ) {
+	// 	location.href = loc.replace(/^(.+)$/, "/sp$1");					
+	// } else if( UAManager.type === "pc" && currentMode === "MOBILE" ) {
+	// 	loc = loc.replace(/(\/salon\/(ashiya|kobe|hiroo|osaka|cocochie)\/).*$/,"$1");
+	// 	loc = loc.replace(/(\/recruit\/).*$/,"$1");
+	// 	location.href = loc.replace("/sp/", "/");
+	// }
 	
 })();
 

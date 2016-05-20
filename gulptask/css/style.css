@@ -71,7 +71,7 @@ img {
 .page-header h1 {
 	position: absolute;
 	left: 0;
-	bottom: 500px;
+	bottom: 50vh;
 	width: 100%;
 	text-align: center;
 	z-index: 2;
