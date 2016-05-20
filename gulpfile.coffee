@@ -9,7 +9,9 @@ gulp.task 'browser-sync', ['rebuild'], ->
   broeserSync({
     server: {
       baseDir: './'
-    }
+    },
+    port: 8080,
+    host: '0.0.0.0'
   })
 
 gulp.task 'rebuild', ->
