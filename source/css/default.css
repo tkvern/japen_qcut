@@ -16,13 +16,13 @@ select {
 	word-wrap: normal !important;
 }
 
-html, a, form, area, div, table, dl, dt, dd, ul, ol, li, dd, h1, h2, h3, h4, h5, h6, p{
+html, a, form, area, div, table, dl, dt, dd, ul, li, dd, h1, h2, h3, h4, h5, h6, p{
 	word-wrap: break-word;
 }
 
 body,div,pre,p,blockquote,
 form,fieldset,input,textarea,select,option,
-dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,
 table,embed,object {
 	margin:0;
 	padding:0;
