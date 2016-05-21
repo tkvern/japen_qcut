@@ -14,6 +14,11 @@ gulp.task 'browser-sync', ['rebuild'], ->
   broeserSync({
     server: {
       baseDir: './dist/'
+    },
+    port: 8080,
+    host: '0.0.0.0',
+    ui: {
+      port: 8081
     }
   })
 
