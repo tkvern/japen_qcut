@@ -6,3 +6,4 @@ node_modules/
 themes/next/
 public/
 .deploy*/
+dist/

@@ -9,10 +9,12 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.12.5",
+    "coffee-script": "^1.10.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.4.4",
     "gulp-concat": "^2.6.0",
+    "gulp-html-extend": "^1.1.6",
     "gulp-imagemin": "^2.4.0",
     "gulp-jshint": "^2.0.0",
     "gulp-livereload": "^3.8.1",
@@ -22,7 +24,6 @@
     "gulp-ruby-sass": "^2.0.6",
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.5",
-    "coffee-script": "^1.10.0",
     "jshint": "^2.9.2"
   },
   "description": ""
