@@ -1,13 +1,14 @@
-gulp = require('gulp')
-sass = require('gulp-ruby-sass')
+gulp         = require('gulp')
+cache        = require('gulp-cache')
+uglify       = require('gulp-uglify')
+jshint       = require('gulp-jshint')
+sass         = require('gulp-ruby-sass')
+imagemin     = require('gulp-imagemin')
+broeserSync  = require('browser-sync')
+minifycss    = require('gulp-minify-css')
+extender     = require('gulp-html-extend')
+minifyHTML   = require('gulp-minify-html')
 autoprefixer = require('gulp-autoprefixer')
-broeserSync = require('browser-sync')
-imagemin = require('gulp-imagemin')
-cache = require('gulp-cache')
-minifycss = require('gulp-minify-css')
-uglify = require('gulp-uglify')
-jshint = require('gulp-jshint')
-extender = require('gulp-html-extend')
 
 gulp.task 'browser-sync', ['rebuild'], ->
   broeserSync({
@@ -24,8 +25,7 @@ gulp.task 'watch', ->
   gulp.watch(['./source/**/*.html'], ['extend'])
   gulp.watch(['./source/**/*.css'], ['css'])
   gulp.watch(['./source/**/*.js'], ['js'])
-  gulp.watch(['./source/img/**.*'], ['image'])
-  gulp.watch(['./source/gallery/**/*.*'], ['image'])
+  gulp.watch(['./source/**/*.jpg','./source/**/*.png'], ['image'])
 
 
 gulp.task 'css', -> 
@@ -37,6 +37,7 @@ gulp.task 'css', ->
 gulp.task 'extend', -> 
   gulp.src('./source/views/application/**/*.html') 
   .pipe extender({annotations:false,verbose:false})
+  .pipe minifyHTML()
   .pipe gulp.dest('./dist/')
 
 
@@ -46,10 +47,12 @@ gulp.task 'js', ->
   .pipe gulp.dest('./dist/')
 
 gulp.task 'image', -> 
-  gulp.src('./source/**/*.*') 
+  gulp.src(['./source/**/*.jpg','./source/**/*.png']) 
   .pipe cache(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
   .pipe gulp.dest('./dist/')
 
+
+gulp.task 'build', ['css', 'js', 'image', 'extend']
 
 gulp.task 'default', ['browser-sync', 'watch']
 
