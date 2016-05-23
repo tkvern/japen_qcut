@@ -1,4 +1,4 @@
-@charset utf-8;
+@charset "utf-8";
 
 /* --------------------------------------------------
  * Common
@@ -117,7 +117,7 @@
 	left: 25px;
 	width: 21px;
 	height: 40px;
-	background: url(img/lightbox.png) no-repeat 0 0;
+	background: url(/img/lightbox.png) no-repeat 0 0;
 	cursor: pointer;
 }
 
@@ -133,7 +133,7 @@
 	right: 25px;
 	width: 21px;
 	height: 40px;
-	background: url(img/lightbox.png) no-repeat 0 -40px;
+	background: url(/img/lightbox.png) no-repeat 0 -40px;
 	cursor: pointer;
 }
 
@@ -149,7 +149,7 @@
 	right: 29px;
 	width: 20px;
 	height: 20px;
-	background: url(img/lightbox.png) no-repeat 0 -80px;
+	background: url(/img/lightbox.png) no-repeat 0 -80px;
 	cursor: pointer;
 }
 
@@ -180,7 +180,7 @@
 	width: 21px;
 	height: 40px;
 	margin-top: -20px;
-	background: url(img/lightbox.png) no-repeat 0 0;
+	background: url(/img/lightbox.png) no-repeat 0 0;
 	cursor: pointer;
 }
 
@@ -197,7 +197,7 @@
 	width: 21px;
 	height: 40px;
 	margin-top: -20px;
-	background: url(img/lightbox.png) no-repeat 0 -40px;
+	background: url(/img/lightbox.png) no-repeat 0 -40px;
 	cursor: pointer;
 }
 
@@ -213,7 +213,7 @@
 	right: 40px;
 	width: 20px;
 	height: 20px;
-	background: url(img/lightbox.png) no-repeat 0 -80px;
+	background: url(/img/lightbox.png) no-repeat 0 -80px;
 	cursor: pointer;
 }
 
