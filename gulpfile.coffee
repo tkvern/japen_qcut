@@ -4,9 +4,10 @@ cache        = require('gulp-cache')
 uglify       = require('gulp-uglify')
 concat       = require('gulp-concat')
 jshint       = require('gulp-jshint')
-sass         = require('gulp-ruby-sass')
-imagemin     = require('gulp-imagemin')
 broeserSync  = require('browser-sync')
+sitemap      = require('gulp-sitemap')
+imagemin     = require('gulp-imagemin')
+sass         = require('gulp-ruby-sass')
 minifycss    = require('gulp-minify-css')
 extender     = require('gulp-html-extend')
 minifyHTML   = require('gulp-minify-html')
@@ -60,6 +61,11 @@ gulp.task 'image', ->
 
 gulp.task 'clean', -> 
   del ['./dist/css','./dist/js','./dist/gallery', './dist/img', './dist/**/*.html']
+
+gulp.task 'sitemap', ->
+    gulp.src('dist/**/*.html', { read: false })
+        .pipe sitemap({ siteUrl: 'http://yulive.cn' })
+        .pipe gulp.dest('./dist/')
 
 gulp.task 'build', ['css', 'js', 'image', 'extend']
 
