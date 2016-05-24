@@ -31,13 +31,13 @@ gulp.task 'rebuild', ->
 gulp.task 'watch', ->
   gulp.watch(['./dist/**/*.*'], ['rebuild'])
   gulp.watch(['./source/**/*.html'], ['extend'])
-  gulp.watch(['./source/**/*.css'], ['css'])
+  gulp.watch(['./source/**/*.scss'], ['styles'])
   gulp.watch(['./source/**/*.js'], ['js'])
   gulp.watch(['./source/**/*.jpg','./source/**/*.png'], ['image'])
 
 
-gulp.task 'css', -> 
-  gulp.src('./source/**/*.css') 
+gulp.task 'styles', -> 
+  return sass('./source/scss/**/*.scss', { style: 'compressed' })
   .pipe autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4')
   .pipe concat('style.css')
   .pipe minifycss()
@@ -67,7 +67,7 @@ gulp.task 'sitemap', ->
         .pipe sitemap({ siteUrl: 'http://yulive.cn' })
         .pipe gulp.dest('./dist/')
 
-gulp.task 'build', ['css', 'js', 'image', 'extend']
+gulp.task 'build', ['styles', 'js', 'image', 'extend']
 
 gulp.task 'default', ['browser-sync', 'watch']
 
