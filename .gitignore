@@ -7,3 +7,4 @@ themes/next/
 public/
 .deploy*/
 dist/
+.sass-cache/
